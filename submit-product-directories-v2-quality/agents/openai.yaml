@@ -1,4 +1,4 @@
 interface:
   display_name: "SPD V2 Quality"
-  short_description: "Quality-first directory qualification and submission"
-  default_prompt: "Use $submit-product-directories-v2-quality to deeply qualify and process a small, authorized product-directory batch with auditable evidence."
+  short_description: "Quality-first browser/API directory qualification and submission"
+  default_prompt: "Use $submit-product-directories-v2-quality to deeply qualify a small authorized batch. Use a real browser for ordinary website forms, official APIs only when documented, hand off CAPTCHA/login/email verification, and keep auditable evidence-backed records."
