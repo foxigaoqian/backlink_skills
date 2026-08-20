@@ -28,7 +28,7 @@
 |---|---|---|---|---|---|
 | GitHub / Open WebGame | Public contextual case page | High | Free / none | published | https://github.com/foxigaoqian/open-webgame/blob/main/examples/dear-passengers-crew.md |
 | Viesearch | https://viesearch.com/submit | High | Free route visible | ready — account/API key or form execution needed | Games category is available; public API also supports POST /api/submit after account API-key setup |
-| Zearches | https://www.zearches.com/submit-website-free.php | High | Free / no backlink exchange required | ready — form execution needed | Gaming & Esports directory is available |
+| Zearches | https://www.zearches.com/submit-website-free.php | High | Free / no backlink exchange required | queued — no submission evidence yet | Adapter + GitHub Action + approved request are committed; no workflow/submission receipt is currently observable, so do not count it as submitted |
 | Indieseek | https://indieseek.xyz/how-to-add-url/ | Medium-high | Free / reciprocal not required | blocked — user action | reCAPTCHA required by submission flow |
 | ExactSeek | https://www.exactseek.com/add.html | Medium | Free submission / newsletter consent | blocked — email verification | Requires name/email, terms acceptance and email verification |
 | TagDirectorY | https://en.tagdirectory.net/ | Medium | Free / no reciprocal | ready — account/form execution needed | Live directory with Add Site route |
@@ -42,6 +42,7 @@
 ## Status meanings
 
 - `published`: public backlink is live.
+- `queued — no submission evidence yet`: automation/request exists, but no reliable final submission response has been captured.
 - `ready — form execution needed`: route and basic eligibility verified, but final external form action has not been executed.
 - `blocked — user action`: CAPTCHA or similar manual safeguard requires user interaction.
 - `blocked — email verification`: submission requires a real email/verification step.
@@ -51,7 +52,7 @@
 ## Next priority
 
 1. Viesearch — Games category, then verify publication after moderation.
-2. Zearches — Gaming & Esports.
+2. Zearches — Gaming & Esports; execute only after GitHub Actions is enabled/observable, then capture the final receipt.
 3. Indieseek — complete reCAPTCHA manually when executing.
 4. TagDirectorY — verify category/tag fit before final submission.
 5. Inkwell — use only if a suitable entertainment/game category can be selected.
