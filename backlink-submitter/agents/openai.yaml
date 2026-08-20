@@ -1,0 +1,4 @@
+interface:
+  display_name: "Backlink Submitter"
+  short_description: "Browser-first backlink discovery and submission for project sites"
+  default_prompt: "Use $backlink-submitter for this project URL. Infer the site type, select a small relevant batch, use the browser for ordinary forms and official APIs only when documented, hand off CAPTCHA/login/email verification, and keep a resumable campaign record."
