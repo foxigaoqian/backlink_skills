@@ -6,5 +6,7 @@
     "Gaming & Esports",
     "Gaming",
     "Games"
-  ]
+  ],
+  "attempt": 2,
+  "retry_reason": "Submission form is on the live homepage, not the information page."
 }
