@@ -60,5 +60,5 @@ jobs:
           while IFS= read -r file; do
             [[ -n "$file" ]] || continue
             echo "==> $file"
-            python3 scripts/submit_zearches.py "$file"
+            python3 scripts/submit_zearches_index.py "$file"
           done <<< "$REQUEST_FILES"
