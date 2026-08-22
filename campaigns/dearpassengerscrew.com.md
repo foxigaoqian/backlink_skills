@@ -34,6 +34,10 @@
 | ExactSeek | https://www.exactseek.com/add.html | Medium | Free submission / newsletter consent | browser + email handoff | blocked — email verification | Requires name/email, terms acceptance and email verification |
 | TagDirectorY | https://en.tagdirectory.net/ | Medium | Free / no reciprocal | browser | blocked — account or email policy | Add Site opens registration requiring email, password, terms acceptance and robot safety check; no account was created |
 | Inkwell | https://zhuixiuhuan.top/ | Low / ineligible | Free | none | excluded | Quality gate failed: promotes one submission to 500+ directory-network listings, recent inventory is dominated by casino pages, and no suitable non-gambling game-guide category exists |
+| Curlie | https://curlie.org/en/Games/Video_Games/Simulation/Business/ | High | Free / no reciprocal | browser + email + CAPTCHA handoff | blocked — user action | Business Simulation is the closest currently accepting category; form is prepared but requires a submitter email, reCAPTCHA and final confirmation |
+| SoMuch | https://somuch.com/submit-links/ | Medium | Basic listing free / no reciprocal | browser + email + CAPTCHA handoff | blocked — user action | Entertainment > Games form prepared; requires submitter email, reCAPTCHA and email verification |
+| Sites Web Directory | https://www.siteswebdirectory.com/submit.php?c=4&LINK_TYPE=2 | Low-medium | Regular submission free / no reciprocal | browser + email + human-check handoff | blocked — user action | Games category and free regular route selected; newsletter disabled; requires owner email and math human check |
+| World Web Directory | https://www.worldweb-directory.com/add.php | unavailable | unknown | none | unavailable | Current submission URL returns 404 |
 | Entireweb | https://www.entireweb.com/free_submission/webpage/ | Low-medium | Free | browser | hold | Primarily search-engine/web submission rather than a clearly confirmed public backlink listing |
 | WikiIndex | https://wikiindex.org/w/WikiIndex%3AAdd_a_Wiki | Low / ineligible | Free | none | excluded | Requires a genuine wiki; current Dear Passengers Crew is an independent guide with wiki-style reference pages, not represented as a public-editable wiki |
 | Indie Wiki Buddy | https://getindie.wiki/Read | Ineligible | Free | none | excluded | Requires a publicly editable independent wiki |
@@ -46,6 +50,11 @@
 - 2026-08-22T15:08:24+08:00 | event_id=evt-indieseek-20260822-001 | action=browser-submit-after-user-confirmed-human-check | result=awaiting-approval | evidence=ev-indieseek-20260822-001
 - 2026-08-22T15:08:24+08:00 | event_id=evt-tagdirectory-20260822-001 | action=inspection | result=blocked-account-email-policy | evidence=ev-tagdirectory-20260822-001
 - 2026-08-22T15:08:24+08:00 | event_id=evt-inkwell-20260822-001 | action=quality-gate | result=excluded | evidence=ev-inkwell-20260822-001
+
+- 2026-08-22T15:21:35+08:00 | event_id=evt-curlie-20260822-001 | action=form-preparation | result=blocked-user-action-email-captcha | evidence=ev-curlie-20260822-001
+- 2026-08-22T15:21:35+08:00 | event_id=evt-somuch-20260822-001 | action=form-preparation | result=blocked-user-action-email-captcha | evidence=ev-somuch-20260822-001
+- 2026-08-22T15:21:35+08:00 | event_id=evt-sitesweb-20260822-001 | action=form-preparation | result=blocked-user-action-email-human-check | evidence=ev-sitesweb-20260822-001
+- 2026-08-22T15:21:35+08:00 | event_id=evt-worldweb-20260822-001 | action=inspection | result=unavailable | evidence=ev-worldweb-20260822-001
 
 ## Status meanings
 
