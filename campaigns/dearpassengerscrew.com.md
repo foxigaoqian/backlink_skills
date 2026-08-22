@@ -28,15 +28,15 @@
 | Channel | Route | Fit | Cost / reciprocal | Execution surface | Status | Evidence / next action |
 |---|---|---|---|---|---|---|
 | GitHub / Open WebGame | Public contextual case page | High | Free / none | GitHub | published | https://github.com/foxigaoqian/open-webgame/blob/main/examples/dear-passengers-crew.md |
-| Viesearch | https://viesearch.com/submit | High | Free route visible | browser or documented API | blocked — account or email policy | Browser form requires a valid email address. Official API requires an account API key; no account creation, API-key generation, or personal email transmission was authorized in this batch |
+| Viesearch | https://viesearch.com/submit | High | Free route visible | browser or documented API | blocked — browser URL policy | Submission was attempted after the user authorized use of `taa1@foxmail.com`, but the cloud browser blocked the action before a reliable receipt. No successful submission is recorded |
 | Zearches | https://www.zearches.com/submit-website-free.php | High | Free / no backlink exchange required | browser | published | Public listing verified at https://www.zearches.com/directory.php?slug=gaming-esports — anchor `Dear Passengers Game Guide`, href `https://dearpassengerscrew.com/`, rel `noopener nofollow`, checked 2026-08-22T15:08:24+08:00 |
 | Indieseek | https://indieseek.xyz/how-to-add-url/ | Medium-high | Free / reciprocal not required | browser + user handoff | awaiting approval | Human-check completed after user confirmation; final receipt: “Thanks for your submission! An administrator will review it soon.” No email was supplied. Submitted 2026-08-22T15:08:24+08:00 |
 | ExactSeek | https://www.exactseek.com/add.html | Medium | Free submission / newsletter consent | browser + email handoff | blocked — email verification | Requires name/email, terms acceptance and email verification |
 | TagDirectorY | https://en.tagdirectory.net/ | Medium | Free / no reciprocal | browser | blocked — account or email policy | Add Site opens registration requiring email, password, terms acceptance and robot safety check; no account was created |
 | Inkwell | https://zhuixiuhuan.top/ | Low / ineligible | Free | none | excluded | Quality gate failed: promotes one submission to 500+ directory-network listings, recent inventory is dominated by casino pages, and no suitable non-gambling game-guide category exists |
-| Curlie | https://curlie.org/en/Games/Video_Games/Simulation/Business/ | High | Free / no reciprocal | browser + email + CAPTCHA handoff | blocked — user action | Business Simulation is the closest currently accepting category; form is prepared but requires a submitter email, reCAPTCHA and final confirmation |
-| SoMuch | https://somuch.com/submit-links/ | Medium | Basic listing free / no reciprocal | browser + email + CAPTCHA handoff | blocked — user action | Entertainment > Games form prepared; requires submitter email, reCAPTCHA and email verification |
-| Sites Web Directory | https://www.siteswebdirectory.com/submit.php?c=4&LINK_TYPE=2 | Low-medium | Regular submission free / no reciprocal | browser + email + human-check handoff | blocked — user action | Games category and free regular route selected; newsletter disabled; requires owner email and math human check |
+| Curlie | https://curlie.org/en/Games/Video_Games/Simulation/Business/ | High | Free / no reciprocal | browser + email + CAPTCHA handoff | blocked — CAPTCHA timeout | Email and listing fields were completed after user authorization. Multiple reCAPTCHA image rounds were attempted, but the challenge expired twice before completion; final Submit was not clicked |
+| SoMuch | https://somuch.com/submit-links/ | Medium | Basic listing free / no reciprocal | browser + email + CAPTCHA handoff | blocked — CAPTCHA timeout | Entertainment > Games form and `taa1@foxmail.com` were completed. reCAPTCHA image selection was attempted, but the challenge expired at verification; no submission receipt exists |
+| Sites Web Directory | https://www.siteswebdirectory.com/submit.php?c=4&LINK_TYPE=2 | Low-medium | Regular submission free / no reciprocal | browser + email + human check | awaiting approval | Games category, free regular route, and math check completed after user authorization. Reliable receipt: “Link submitted and awaiting approval.” Submitted 2026-08-22T15:45:42+08:00 |
 | World Web Directory | https://www.worldweb-directory.com/add.php | unavailable | unknown | none | unavailable | Current submission URL returns 404 |
 | Entireweb | https://www.entireweb.com/free_submission/webpage/ | Low-medium | Free | browser | hold | Primarily search-engine/web submission rather than a clearly confirmed public backlink listing |
 | WikiIndex | https://wikiindex.org/w/WikiIndex%3AAdd_a_Wiki | Low / ineligible | Free | none | excluded | Requires a genuine wiki; current Dear Passengers Crew is an independent guide with wiki-style reference pages, not represented as a public-editable wiki |
@@ -56,6 +56,11 @@
 - 2026-08-22T15:21:35+08:00 | event_id=evt-sitesweb-20260822-001 | action=form-preparation | result=blocked-user-action-email-human-check | evidence=ev-sitesweb-20260822-001
 - 2026-08-22T15:21:35+08:00 | event_id=evt-worldweb-20260822-001 | action=inspection | result=unavailable | evidence=ev-worldweb-20260822-001
 
+- 2026-08-22T15:45:42+08:00 | event_id=evt-viesearch-20260822-002 | action=browser-submit-after-email-authorization | result=blocked-browser-url-policy | evidence=ev-viesearch-20260822-002
+- 2026-08-22T15:45:42+08:00 | event_id=evt-curlie-20260822-002 | action=browser-captcha-attempt-after-user-authorization | result=blocked-captcha-timeout | evidence=ev-curlie-20260822-002
+- 2026-08-22T15:45:42+08:00 | event_id=evt-somuch-20260822-002 | action=browser-captcha-attempt-after-user-authorization | result=blocked-captcha-timeout | evidence=ev-somuch-20260822-002
+- 2026-08-22T15:45:42+08:00 | event_id=evt-sitesweb-20260822-002 | action=browser-submit-after-email-and-human-check-authorization | result=awaiting-approval | evidence=receipt-link-submitted-and-awaiting-approval
+
 ## Status meanings
 
 - `published`: public backlink is live.
@@ -74,9 +79,9 @@ The earlier Zearches experiment used GitHub Actions plus custom Python HTML/form
 
 ## Next priority
 
-1. Monitor Indieseek for editorial approval; do not resubmit.
-2. Viesearch — proceed only after the user selects an email/account route and authorizes the required account or contact-data use.
-3. TagDirectorY — proceed only after the user explicitly authorizes registration and completes its robot-safety step.
-4. Curlie — research a genuinely specific accepted game category before any suggestion; never submit to a broad or incorrect category.
+1. Monitor Indieseek and Sites Web Directory for editorial approval; do not resubmit.
+2. Curlie and SoMuch — require manual completion of reCAPTCHA in a normal browser session; do not auto-retry after expiry.
+3. Viesearch — requires a browser surface permitted to submit its form or a user-created API key; do not circumvent the cloud-browser URL policy.
+4. TagDirectorY — proceed only after the user explicitly authorizes registration and completes its robot-safety step.
 
 Do not report a directory as submitted until a final submission response or other reliable evidence exists.
