@@ -33,6 +33,9 @@
 | GainWeb | https://gainweb.org/submit.php?LINK_TYPE=2 | Medium-low | Regular free / no reciprocal | awaiting approval | Computers and Internet > Software > Multimedia; no email supplied. Receipt: “Link submitted and awaiting approval.” Submitted 2026-08-22T16:28:34+08:00 |
 | IndieSeek | https://indieseek.xyz/links/suggest.php?action=addlink | Medium-high | Free / reciprocal not required | awaiting approval | Computers > Software; optional email left blank; human math check completed after user confirmation. Receipt: “Thanks for your submission! An administrator will review it soon.” Submitted 2026-08-22T16:28:34+08:00 |
 | Zearches | https://www.zearches.com/index.php#top | High | Free / no reciprocal | blocked — site validation error | Software & SaaS Tools form repeatedly returned “title too long” even after shortening the title to “ImageKB”; no public listing found. Do not retry automatically |
+| Launching Next | https://www.launchingnext.com/thanks/?i=146152 | Medium-high | Free queue; $99 fast-track declined | awaiting approval | Receipt ID 146152; status “In Queue” with estimated wait of 4 months. Newsletter disabled. Submitted 2026-08-22 |
+| Startup Stash | https://form.typeform.com/to/b8EyDE | High | Free; advertising offer declined | awaiting approval | Category: Design; optional logo and video skipped. Receipt: “Thank you for applying to get listed on StartupStash!” Submitted 2026-08-22 |
+| Tiny Startups | https://tally.so/r/npZLWP | High | Free / no reciprocal | pending upload authorization | Latest form requires a square logo and wide featured image or website screenshot. Other fields are prepared; not submitted |
 
 ### Attempt/Event log
 
@@ -40,10 +43,14 @@
 - 2026-08-22T16:28:34+08:00 | event_id=evt-gainweb-imagekb-20260822-001 | action=browser-submit-after-user-confirmation | result=awaiting-approval | evidence=receipt-link-submitted-and-awaiting-approval
 - 2026-08-22T16:28:34+08:00 | event_id=evt-indieseek-imagekb-20260822-001 | action=browser-submit-after-user-confirmed-human-check | result=awaiting-approval | evidence=receipt-administrator-will-review
 - 2026-08-22T16:28:34+08:00 | event_id=evt-zearches-imagekb-20260822-001 | action=browser-submit-validation-retry | result=blocked-site-validation-error | evidence=title-too-long-error-with-seven-character-title
+- 2026-08-22 | event_id=evt-launchingnext-imagekb-20260822-001 | action=browser-submit-after-user-confirmation | result=awaiting-approval | evidence=receipt-id-146152-in-queue
+- 2026-08-22 | event_id=evt-startupstash-imagekb-20260822-001 | action=browser-submit-after-user-confirmation | result=awaiting-approval | evidence=thank-you-application-receipt
+- 2026-08-22 | event_id=evt-tinystartups-imagekb-20260822-001 | action=form-prepared | result=pending-file-upload-authorization | evidence=mandatory-logo-and-wide-featured-image
 
 ## Next priority
 
-1. Monitor Sites Plus, GainWeb and IndieSeek for approval; do not resubmit.
-2. Keep the existing ToolPromote, NoUploadTools and Chrome Web Store listings; avoid duplicates.
-3. Zearches requires a site-side validation fix or manual review; do not retry automatically.
-4. Prefer relevant image-tool, privacy-tool and web-application directories over bulk general-directory submissions.
+1. Obtain explicit approval before uploading ImageKB's public logo and a branded featured image to Tiny Startups; then finish the prepared form.
+2. Monitor Launching Next, Startup Stash, Sites Plus, GainWeb and IndieSeek for approval; do not resubmit.
+3. Keep the existing ToolPromote, NoUploadTools and Chrome Web Store listings; avoid duplicates.
+4. Zearches requires a site-side validation fix or manual review; do not retry automatically.
+5. Prefer relevant image-tool, privacy-tool and web-application directories over bulk general-directory submissions.
