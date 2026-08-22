@@ -28,17 +28,24 @@
 | Channel | Route | Fit | Cost / reciprocal | Execution surface | Status | Evidence / next action |
 |---|---|---|---|---|---|---|
 | GitHub / Open WebGame | Public contextual case page | High | Free / none | GitHub | published | https://github.com/foxigaoqian/open-webgame/blob/main/examples/dear-passengers-crew.md |
-| Viesearch | https://viesearch.com/submit | High | Free route visible | browser or documented API | ready — browser execution needed | Games category available; if an official authenticated API route is used, keep credentials outside this record |
-| Zearches | https://www.zearches.com/submit-website-free.php | High | Free / no backlink exchange required | browser | ready — browser execution needed | Two experimental GitHub-Action/HTTP-parser attempts failed to obtain the browser form. These were backend failures, not site submission failures. The brittle adapters/workflow have been removed; next attempt must use a real browser surface |
-| Indieseek | https://indieseek.xyz/how-to-add-url/ | Medium-high | Free / reciprocal not required | browser + user handoff | blocked — user action | reCAPTCHA required by submission flow |
+| Viesearch | https://viesearch.com/submit | High | Free route visible | browser or documented API | blocked — account or email policy | Browser form requires a valid email address. Official API requires an account API key; no account creation, API-key generation, or personal email transmission was authorized in this batch |
+| Zearches | https://www.zearches.com/submit-website-free.php | High | Free / no backlink exchange required | browser | published | Public listing verified at https://www.zearches.com/directory.php?slug=gaming-esports — anchor `Dear Passengers Game Guide`, href `https://dearpassengerscrew.com/`, rel `noopener nofollow`, checked 2026-08-22T15:08:24+08:00 |
+| Indieseek | https://indieseek.xyz/how-to-add-url/ | Medium-high | Free / reciprocal not required | browser + user handoff | awaiting approval | Human-check completed after user confirmation; final receipt: “Thanks for your submission! An administrator will review it soon.” No email was supplied. Submitted 2026-08-22T15:08:24+08:00 |
 | ExactSeek | https://www.exactseek.com/add.html | Medium | Free submission / newsletter consent | browser + email handoff | blocked — email verification | Requires name/email, terms acceptance and email verification |
-| TagDirectorY | https://en.tagdirectory.net/ | Medium | Free / no reciprocal | browser | ready — browser execution needed | Live directory with Add Site route; verify category/tag fit in the live UI before final submit |
-| Inkwell | https://zhuixiuhuan.top/ | Medium | Free | browser | ready — browser execution needed | Human-reviewed generic directory; use only if the live UI exposes a suitable entertainment/game category |
+| TagDirectorY | https://en.tagdirectory.net/ | Medium | Free / no reciprocal | browser | blocked — account or email policy | Add Site opens registration requiring email, password, terms acceptance and robot safety check; no account was created |
+| Inkwell | https://zhuixiuhuan.top/ | Low / ineligible | Free | none | excluded | Quality gate failed: promotes one submission to 500+ directory-network listings, recent inventory is dominated by casino pages, and no suitable non-gambling game-guide category exists |
 | Entireweb | https://www.entireweb.com/free_submission/webpage/ | Low-medium | Free | browser | hold | Primarily search-engine/web submission rather than a clearly confirmed public backlink listing |
 | WikiIndex | https://wikiindex.org/w/WikiIndex%3AAdd_a_Wiki | Low / ineligible | Free | none | excluded | Requires a genuine wiki; current Dear Passengers Crew is an independent guide with wiki-style reference pages, not represented as a public-editable wiki |
 | Indie Wiki Buddy | https://getindie.wiki/Read | Ineligible | Free | none | excluded | Requires a publicly editable independent wiki |
 | Warp Point | https://www.warppoint.games/submit | Low | Free | none | excluded for now | Primarily game writing/blog directory; requires RSS and says pure wikis are not a great fit |
 | Best Games Directory | https://www.best-games-directory.com/submit-site.html | Relevant but policy conflict | Free requires reciprocal | none | excluded | Free listing requires reciprocal link; one-way listing is paid |
+
+### Attempt/Event log
+
+- 2026-08-22T15:08:24+08:00 | event_id=evt-zearches-20260822-001 | action=browser-submit-and-public-check | result=published | evidence=ev-zearches-20260822-001
+- 2026-08-22T15:08:24+08:00 | event_id=evt-indieseek-20260822-001 | action=browser-submit-after-user-confirmed-human-check | result=awaiting-approval | evidence=ev-indieseek-20260822-001
+- 2026-08-22T15:08:24+08:00 | event_id=evt-tagdirectory-20260822-001 | action=inspection | result=blocked-account-email-policy | evidence=ev-tagdirectory-20260822-001
+- 2026-08-22T15:08:24+08:00 | event_id=evt-inkwell-20260822-001 | action=quality-gate | result=excluded | evidence=ev-inkwell-20260822-001
 
 ## Status meanings
 
@@ -58,10 +65,9 @@ The earlier Zearches experiment used GitHub Actions plus custom Python HTML/form
 
 ## Next priority
 
-1. Zearches — Gaming & Esports, execute in a real browser and capture the visible result.
-2. Viesearch — Games category, use browser unless a documented authenticated API is deliberately selected.
-3. Indieseek — open in browser and hand off only the reCAPTCHA step.
-4. TagDirectorY — verify live category/tag fit, then submit in browser.
-5. ExactSeek — browser submission plus user email-verification handoff.
+1. Monitor Indieseek for editorial approval; do not resubmit.
+2. Viesearch — proceed only after the user selects an email/account route and authorizes the required account or contact-data use.
+3. TagDirectorY — proceed only after the user explicitly authorizes registration and completes its robot-safety step.
+4. Curlie — research a genuinely specific accepted game category before any suggestion; never submit to a broad or incorrect category.
 
 Do not report a directory as submitted until a final submission response or other reliable evidence exists.
