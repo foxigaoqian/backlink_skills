@@ -37,6 +37,12 @@
 | Curlie | https://curlie.org/en/Games/Video_Games/Simulation/Business/ | High | Free / no reciprocal | browser + email + CAPTCHA handoff | blocked — CAPTCHA timeout | Email and listing fields were completed after user authorization. Multiple reCAPTCHA image rounds were attempted, but the challenge expired twice before completion; final Submit was not clicked |
 | SoMuch | https://somuch.com/submit-links/ | Medium | Basic listing free / no reciprocal | browser + email + CAPTCHA handoff | blocked — CAPTCHA timeout | Entertainment > Games form and `taa1@foxmail.com` were completed. reCAPTCHA image selection was attempted, but the challenge expired at verification; no submission receipt exists |
 | Sites Web Directory | https://www.siteswebdirectory.com/submit.php?c=4&LINK_TYPE=2 | Low-medium | Regular submission free / no reciprocal | browser + email + human check | awaiting approval | Games category, free regular route, and math check completed after user authorization. Reliable receipt: “Link submitted and awaiting approval.” Submitted 2026-08-22T15:45:42+08:00 |
+| Sites Plus | https://www.sites-plus.com/submit?c=260&LINK_TYPE=9 | Medium | Regular submission free / no reciprocal | browser + email | awaiting approval | Recreation > Games > Computer and Video Games; newsletter disabled. Reliable receipt: “Link submitted and awaiting approval.” Submitted 2026-08-22T16:05:48+08:00 |
+| GainWeb | https://gainweb.org/submit.php?LINK_TYPE=2 | Medium-low | Regular submission free / no reciprocal | browser + email | awaiting approval | Games > Video Games; free Regular route. Reliable receipt: “Link submitted and awaiting approval.” Submitted 2026-08-22T16:05:48+08:00 |
+| iii.social | https://iii.social/submit | Medium / account gated | Free | browser | blocked — registration required | Submission requires a new email/password account; no account was created |
+| OneMillionDirectory | account-gated submission | Medium | Free Basic route | browser | blocked — registration required | Free Basic submission redirects to login; no account was created |
+| LDM Studio Directory | current submission rules | Ineligible | Free route exists | none | excluded | Current rules explicitly reject Games sites |
+| SitesOnDisplay | https://www.sitesondisplay.com/add.html | Low-medium / account gated | Free | none | blocked — registration required | Terms state user registration is required; no account was created |
 | World Web Directory | https://www.worldweb-directory.com/add.php | unavailable | unknown | none | unavailable | Current submission URL returns 404 |
 | Entireweb | https://www.entireweb.com/free_submission/webpage/ | Low-medium | Free | browser | hold | Primarily search-engine/web submission rather than a clearly confirmed public backlink listing |
 | WikiIndex | https://wikiindex.org/w/WikiIndex%3AAdd_a_Wiki | Low / ineligible | Free | none | excluded | Requires a genuine wiki; current Dear Passengers Crew is an independent guide with wiki-style reference pages, not represented as a public-editable wiki |
@@ -61,6 +67,12 @@
 - 2026-08-22T15:45:42+08:00 | event_id=evt-somuch-20260822-002 | action=browser-captcha-attempt-after-user-authorization | result=blocked-captcha-timeout | evidence=ev-somuch-20260822-002
 - 2026-08-22T15:45:42+08:00 | event_id=evt-sitesweb-20260822-002 | action=browser-submit-after-email-and-human-check-authorization | result=awaiting-approval | evidence=receipt-link-submitted-and-awaiting-approval
 
+- 2026-08-22T16:05:48+08:00 | event_id=evt-sitesplus-20260822-001 | action=browser-submit-after-email-and-rules-authorization | result=awaiting-approval | evidence=receipt-link-submitted-and-awaiting-approval
+- 2026-08-22T16:05:48+08:00 | event_id=evt-gainweb-20260822-001 | action=browser-submit-after-email-and-rules-authorization | result=awaiting-approval | evidence=receipt-link-submitted-and-awaiting-approval
+- 2026-08-22T16:05:48+08:00 | event_id=evt-iii-20260822-001 | action=inspection | result=blocked-registration-required | evidence=submit-page-shows-register-or-login
+- 2026-08-22T16:05:48+08:00 | event_id=evt-onemilliondirectory-20260822-001 | action=inspection | result=blocked-registration-required | evidence=free-basic-redirects-to-login
+- 2026-08-22T16:05:48+08:00 | event_id=evt-sitesondisplay-20260822-001 | action=rules-inspection | result=blocked-registration-required | evidence=terms-require-user-registration
+
 ## Status meanings
 
 - `published`: public backlink is live.
@@ -79,9 +91,9 @@ The earlier Zearches experiment used GitHub Actions plus custom Python HTML/form
 
 ## Next priority
 
-1. Monitor Indieseek and Sites Web Directory for editorial approval; do not resubmit.
+1. Monitor Indieseek, Sites Web Directory, Sites Plus, and GainWeb for editorial approval; do not resubmit.
 2. Curlie and SoMuch — require manual completion of reCAPTCHA in a normal browser session; do not auto-retry after expiry.
 3. Viesearch — requires a browser surface permitted to submit its form or a user-created API key; do not circumvent the cloud-browser URL policy.
-4. TagDirectorY — proceed only after the user explicitly authorizes registration and completes its robot-safety step.
+4. TagDirectorY, iii.social, OneMillionDirectory, and SitesOnDisplay — proceed only after the user explicitly authorizes account registration and any robot-safety step.
 
 Do not report a directory as submitted until a final submission response or other reliable evidence exists.
